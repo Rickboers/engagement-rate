@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Engagement Rate</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#1b1c1f; --muted:#5b5f66; --line:#e3e4e8; --soft:#f4f5f7; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#17181b; --fg:#ececee; --muted:#a3a6ad; --line:#2b2d32; --soft:#202226; } }
+  body { margin:0; width:280px; background:var(--bg); color:var(--fg); font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  header { padding:14px 16px 6px; font-weight:650; font-size:14px; }
+  .group { margin:6px 12px; border:1px solid var(--line); border-radius:10px; background:var(--soft); }
+  label { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:9px 12px; }
+  label + label { border-top:1px solid var(--line); }
+  small { display:block; color:var(--muted); font-size:11.5px; }
+  input[type=checkbox] { width:16px; height:16px; }
+  select { font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:2px 4px; }
+  p { margin:8px 16px 14px; color:var(--muted); font-size:11.5px; }
+</style>
+</head>
+<body>
+<header>Engagement rate</header>
+<div class="group">
+  <label>Instagram <input type="checkbox" id="ig"></label>
+  <label>X <input type="checkbox" id="x"></label>
+  <label><span>YouTube<small>Watch page only</small></span> <input type="checkbox" id="yt"></label>
+</div>
+<div class="group">
+  <label><span>Rate against<small>Views shows nothing where the site gives no view count</small></span>
+    <select id="basis"><option value="views">Views</option><option value="auto">Views, else followers</option><option value="followers">Followers</option></select>
+  </label>
+  <label><span>Reach chip<small>When views are 1.5× followers or more</small></span> <input type="checkbox" id="reach"></label>
+  <label><span>Look up Instagram followers<small>Feed posts on screen only, at most 30 an hour, kept for a week</small></span> <input type="checkbox" id="igLookup"></label>
+</div>
+<p>Engagement is likes, comments, shares and saves on Instagram, and likes, reposts, replies, quotes and bookmarks on X, divided by views or followers. Hover a badge for the counts.</p>
+<script src="defaults.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "engagement-rate",
+  "version": "1.3.1",
+  "private": true,
+  "description": "Chrome extension that shows the engagement rate on Instagram, X and YouTube posts.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check content.js && node --check extract.js && node --check hook.js && node --check popup.js && node --check defaults.js && node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
